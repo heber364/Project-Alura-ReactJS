@@ -1,13 +1,11 @@
 import React from 'react';
-import {ListaDeNotas} from './components/ListaDeNotas/ListaDeNotas';
+import ListaDeNotas from './components/ListaDeNotas/ListaDeNotas';
+import FormularioCadastro from './components/FormularioCadastro/FormularioCadastro';
+
 function App() {
   return (
     <>
-      <form>
-        <input type="text" placeholder="Título"/>
-        <textarea placeholder="Escreva sua nota..."/>
-        <button>Criar Nota</button>
-      </form>
+      <FormularioCadastro/>
       <ListaDeNotas/>
     </>
   );
