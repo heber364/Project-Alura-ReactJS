@@ -1,18 +1,18 @@
 import React, { Component } from "react";
-import CriarNota from "../CriarNota/CriarNota";
+import CardNota from "../CardNota/CardNota";
 
 class ListaDeNotas extends Component {
   render() {
     return (
       <ul>
         <li>
-          <CriarNota />
+          <CardNota />
         </li>
         <li>
-          <CriarNota />
+          <CardNota />
         </li>
         <li>
-          <CriarNota />
+          <CardNota />
         </li>
       </ul>
     );

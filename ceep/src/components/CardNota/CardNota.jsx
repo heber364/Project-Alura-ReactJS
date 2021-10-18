@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class CriarNota extends Component {
+class CardNota extends Component {
   render() {
     return (
       <section>
@@ -12,4 +12,4 @@ class CriarNota extends Component {
     );
   }
 }
-export default CriarNota;
+export default CardNota;
