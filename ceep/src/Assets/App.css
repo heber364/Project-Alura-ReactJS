@@ -1,6 +1,9 @@
 .conteudo {
   display: flex;
 }
+.conteudo-principal{
+  flex-grow: 9;
+}
 
 :root {
   --primaria: #58a4b0;
