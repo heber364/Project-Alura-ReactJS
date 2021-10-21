@@ -28,8 +28,8 @@ class App extends Component {
             categorias={this.categorias}
           />
           <ListaDeNotas
-            apagarNota={this.notas.apagarNota}
-            notas={this.notas.notas}
+            apagarNota={this.notas.apagarNota.bind(this.notas)}
+            notas={this.notas}
           />
         </main>
       </section>

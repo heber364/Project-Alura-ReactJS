@@ -1,12 +1,19 @@
 import React, { Component } from "react";
 import "./style.css"
 class ListaDeCategorias extends Component {
+  
   constructor() {
     super();
     this.state = {categorias:[]}
+    this._novasCategorias = this._novasCategorias.bind(this);
   }
+  //na montagem de um elemento
   componentDidMount() {
-    this.props.categorias.inscrever(this._novasCategorias.bind(this));
+    this.props.categorias.inscrever(this._novasCategorias);
+  }
+
+  componentWillUnmount() {
+    this.props.categorias.desinscrever(this._novasCategorias);
   }
 
   _novasCategorias(categorias){

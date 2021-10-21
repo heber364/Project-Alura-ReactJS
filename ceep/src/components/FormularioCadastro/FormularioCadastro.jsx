@@ -8,19 +8,23 @@ class FormularioCadastro extends Component{
     this.texto="";
     this.categoria="";
     this.state = {categorias:[]}
+    this._novasCategorias = this._novasCategorias.bind(this);
   }
 
-
-
+  //na montagem de um elemento
   componentDidMount(){
-    this.props.categorias.inscrever(this._novasCategorias.bind(this))
+    this.props.categorias.inscrever(this._novasCategorias)
+    
+  }
+
+  //na desmontagem de um elemento
+  componentWillUnmount(){
+    this.props.categorias.desinscrever(this._novasCategorias)
   }
 
   _novasCategorias(categorias){
     this.setState({...this.state, categorias})
   }
-
-
 
   _handlerMudancaTitulo(evento){
     evento.stopPropagation();
